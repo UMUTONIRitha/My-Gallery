@@ -35,9 +35,9 @@
 * Copy a link to the photo to share with my friends.
 * View photos based on the location they were taken.
 
-<!-- ## Live link
+## Live link
 
-[Here is the Link: Unique_Blog]( https://rithablog.herokuapp.com/ "Unique_Blog") -->
+[Here is the Link: My-Gallery](https://rithagallery.herokuapp.com/"My-Gallery")
 
 ## Contact Information
 
