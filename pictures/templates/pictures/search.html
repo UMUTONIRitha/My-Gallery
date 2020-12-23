@@ -2,10 +2,10 @@
 {% block content %}
 <div class="container" style="font-family: 'Libre Caslon Display', serif;">
     {% if images %}
-    <h2 class="text-center" id="found">You have {{ images|length }} images in '{{message}}' category</h2>
+    <h2 class="text-center"></h2>You have {{ images|length }} images in '{{message}}' category</h2>
     {% else %}
-    <h2 class="text-center" id="foundnon"> You have 0 images for your search {{message}}</h2>
-   
+    <h2 class="text-center"> You have 0 images for your search {{message}}</h2>
+
     {% endif %}
     {% if images %}
     <div class="card-columns">
@@ -14,8 +14,8 @@
             <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
         </div>
 
-        <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
-             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content modalcard">
                     <div class="modal-header">
@@ -33,13 +33,13 @@
                     </div>
 
                     <div class="modal-footer">
-                        <input class="form-control input-lg" type="text"
-                               value="{{image.image.url}}" id="{{image.id}}.url">
+                        <input class="form-control input-lg" type="text" value="{{image.image.url}}"
+                            id="{{image.id}}.url">
                         <button class="btn btn-outline-info btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
                         <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
                         </button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -48,9 +48,3 @@
     {% endif %}
 </div>
 {% endblock %}
-
-
-
-
-
-
