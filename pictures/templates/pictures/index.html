@@ -15,8 +15,10 @@
       <div class="card" data-toggle="modal" data-target="#{{image.id}}">
         <img alt="{{image.name}}" class="card-img" src="{{image.image.url}}">
       </div>
+
       <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
           <div class="modal-content modalcard">
             <div class="modal-header" style="font-family: 'Libre Caslon Display', serif;">
@@ -25,6 +27,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+
             <div class="modal-body" style="font-family: 'Libre Caslon Display', serif;">
               <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
               <br>
@@ -32,6 +35,7 @@
               <p>category:{{image.category}}</p>
               <p>location:{{image.location}}</p>
             </div>
+            
             <div class="modal-footer" style="font-family: 'Libre Caslon Display', serif;">
               <input class="form-control input-lg" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
               <button class="btn btn-outline-info btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
