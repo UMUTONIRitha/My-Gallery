@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+<nav class="navbar navbar-expand-lg navbar-light" style="font-family: 'Delius Swash Caps', cursive;background-color:black">
   <a class="navbar-brand text-white" href="/">
-    <h3>Rita'Gallery</h3>
+    <h3><i class="fas fa-camera"></i>
+     Gallery</h3>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
     aria-controls="navbarTogglerdemo02" aria-expanded="false" aria-label="Toggle navigaion">
@@ -9,11 +11,20 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-md-0">
     </ul>
-    
-    <form class="form-inline my-2 my-md-0" action="/search" role="search">
+    <div class="col-md-5">
+      <span id="locations">
+        {% for location in locations %}
+        <a  href="/location/{{location.name}}" style="color: white;">{{location.name}} &nbsp; &nbsp;</a>
+        {% endfor %}
+      </span>
+    </div>
+    <form class="form-inline my-2 my-md-0" action="/search" role="search" >
       <input class="form-control mr-sm-2" type="search" placeholder="Search Category" name="imagesearch"
-        aria-label="Search">
-      <button class="btn btn-info btn-md my-2 my-sm-0" type="submit">Search</button>
+        aria-label="Search" style="background-color: transparent;">
+      <button class="btn btn-outline-info btn-sm"><i class="fas fa-search"></i>Search</button>
     </form>
+   
+
   </div>
+
 </nav>
