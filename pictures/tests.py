@@ -7,8 +7,8 @@ class TestImage(TestCase):
         self.location.save_location()
         self.category = Category(name='paris')
         self.category.save_category()
-        self.image_test = Image(id=1, name='paris', description='good', location=self.location,
-                                category=self.category)
+        self.image_test = Image(id=1, name='paris', description='good', location=self.location,category=self.category)
+
     def test_instance(self):
         self.assertTrue(isinstance(self.image_test, Image))
 
@@ -52,8 +52,10 @@ class TestLocation(TestCase):
     def setUp(self):
         self.location = Location(name='France')
         self.location.save_location()
+
     def test_instance(self):
         self.assertTrue(isinstance(self.location, Location))
+        
     def test_save_location(self):
         self.location.save_location()
         locations = Location.get_locations()
