@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-    <h2>Gallery</h2>
+<div class="container" style="font-family: 'Libre Caslon Display', serif;">
+    <h2>Photos</h2>
     <hr>
     {% if location_images %}
     <div class="card-columns">
@@ -22,14 +22,13 @@
                     <div class="modal-body">
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                         <p>{{image.description}}</p>
-                        <span class="btn btn-sm btn-outline-success">{{image.category | title}}</span><a
-                            href="/locationl/{{image.location}}"
-                            class="btn btn-sm btn-outline-info">{{image.location}}</a>
+                        <p>{{image.category | title}}</p>
+                        <p>{{image.location}}</p>
                     </div>
                     <div class="modal-footer">
                         <input class="form-control input-lg" type="text"
                         value="{{image.image.url}}" id="{{image.id}}.url">
-                        <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
+                        <button class="btn btn-outline-info btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
                         <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close</button>
                       </div>
                 </div>
