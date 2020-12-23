@@ -11,6 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-md-0">
     </ul>
+
     <div class="col-md-5">
       <span id="locations">
         {% for location in locations %}
@@ -18,6 +19,7 @@
         {% endfor %}
       </span>
     </div>
+    
     <form class="form-inline my-2 my-md-0" action="/search" role="search" >
       <input class="form-control mr-sm-2" type="search" placeholder="Search Category" name="imagesearch"
         aria-label="Search" style="background-color: transparent;">
