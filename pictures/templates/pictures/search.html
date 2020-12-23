@@ -13,6 +13,7 @@
         <div class="card" data-toggle="modal" data-target="#{{image.id}}">
             <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
         </div>
+
         <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -23,12 +24,14 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+
                     <div class="modal-body">
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid"> <br> <br>
                         <span>Description: {{image.description}}</span> <br>
                         <span>Category: {{image.category | title}}</span> <br>
                         <span>Location: {{image.location}}</a></span>
                     </div>
+
                     <div class="modal-footer">
                         <input class="form-control input-lg" type="text"
                                value="{{image.image.url}}" id="{{image.id}}.url">
@@ -36,6 +39,7 @@
                         <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
                         </button>
                     </div>
+                    
                 </div>
             </div>
         </div>
