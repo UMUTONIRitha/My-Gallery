@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+<div class="container" style="font-family: 'Libre Caslon Display', serif;">
     {% if images %}
-    <h2 class="text-center" id="found">Found {{ images|length }} images in '{{message}}' category</h2>
+    <h2 class="text-center" id="found">You have {{ images|length }} images in '{{message}}' category</h2>
     {% else %}
-    <h2 class="text-center" id="foundnon"> Found 0 images for your search {{message}}</h2>
-    <a class="d-block mx-auto" href="/">
-        <button class="btn btn-sm btn-info d-block mx-auto">Back Home</button>
-    </a>
+    <h2 class="text-center" id="foundnon"> You have 0 images for your search {{message}}</h2>
+   
     {% endif %}
     {% if images %}
     <div class="card-columns">
@@ -34,7 +32,7 @@
                     <div class="modal-footer">
                         <input class="form-control input-lg" type="text"
                                value="{{image.image.url}}" id="{{image.id}}.url">
-                        <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
+                        <button class="btn btn-outline-info btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
                         <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
                         </button>
                     </div>
